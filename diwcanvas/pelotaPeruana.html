@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pelota peruana</title>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+    <canvas id="myCanvas" height="600px" width="1200px" style="border: 2px solid black">Tu navegador no soporta canvas</canvas>
+    <script type="text/javascript">
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+        var x = canvas.width/2;
+        var y = canvas.height/2;
+        //var x1 = canvas.width/4
+        //var y1 = canvas.height/3;
+        var dx = 5;
+        var dy = -5;
+        var palah = 10;
+        var palaw = 75;
+        var palax = (canvas.width - palaw)/2;
+        var derpulsa = false;
+        var izqpulsa = false;
+        //var dx1 = 5;
+        //var dy1 = -4;
+        document.addEventListener("keydown", keyDownHandler, false);
+        document.addEventListener("keyup", keyUpHandler, false);
+        setInterval(dibujaBalon,10);
+        //setInterval(dibujaBalon2,10);
+    </script>
+</body>
+</html>
